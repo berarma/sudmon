@@ -10,8 +10,8 @@ Server device requires sending the values to a remote server and then reading
 them from there.
 
 This code is based on what I've learned from reading
-[https://github.com/seneye/SUDDriver](the code that Seneye has
-kindly released). The [https://github.com/dhallgb/Seneye-MQTT/blob/master/protocol.mdown](writing about the protocol that Doug Hall has written) has been also very useful.
+[the code that Seneye has
+kindly released](https://github.com/seneye/SUDDriver). The [writing about the protocol that Doug Hall has written](https://github.com/dhallgb/Seneye-MQTT/blob/master/protocol.mdown) has been also very useful.
 
 The goals of this release are helping debug the protocol and making possible
 the automation of the readings at home.
