@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.7)
-project (SudMon VERSION 0.0.0 DESCRIPTION "SUD library and CLI monitor.")
+project (SudMon VERSION 0.0.0)
 
 configure_file(
     "${PROJECT_SOURCE_DIR}/src/ProjectConfig.h.in"
