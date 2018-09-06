@@ -26,7 +26,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.**
 
 - Seneye USB device (v2)
 - C++ compiler
-- CMake
+- CMake 3.7+
 - Libraries: HIDAPI
 
 ## Build
@@ -49,11 +49,13 @@ make
 sudo make install
 ```
 
-It will install a udev rule to allow using the device to users of the
-"sud" group. Create this group and add your user to it. In case you don't install
-you'll have to run the program as an administrator.
+You will have to run this program as root so it can access the USB device.
 
-Creating the group and adding our user:
+There's a udev rule file *99-sud.rule* included that allows using the device to
+users of the "sud" group. Copying this file to */etc/udev/rules.d* is
+recommended so that you don't have to run the command as run.
+
+Create the "sud" group and add your user to it:
 
 ```
 sudo addgroup sud
@@ -62,10 +64,9 @@ sudo adduser mysuser sud
 
 Now you should restart udev and close all your user sessions (or simply reboot).
 
-If you don't want to install system-wide you'll have to setup the permissions
-to open the device or run the program as root.
+## Usage
 
-You can get help by running:
+There's many options available. You can read the command help by using:
 
 ```
 sudmon -h
