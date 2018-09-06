@@ -61,12 +61,13 @@ bool parseOpts(Options *options, int argc, char * const argv[]) {
     options->machineReadable = false;
     options->useDevTs = false;
     options->humanizeTs = false;
-    options->headerRows = 0;
-    options->waitTime = 0;
+    options->farenheit = false;
     options->cmdList = false;
     options->cmdReading = false;
     options->cmdContReading = false;
     options->cmdSetLeds = false;
+    options->headerRows = 0;
+    options->waitTime = 0;
     options->commands = 0;
     options->ident = NULL;
 
