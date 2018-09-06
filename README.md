@@ -53,7 +53,7 @@ You will have to run this program as root so it can access the USB device.
 
 There's a udev rule file *99-sud.rule* included that allows using the device to
 users of the "sud" group. Copying this file to */etc/udev/rules.d* is
-recommended so that you don't have to run the command as run.
+recommended so that you don't have to run the command as root.
 
 Create the "sud" group and add your user to it:
 
