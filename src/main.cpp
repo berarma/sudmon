@@ -23,7 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include "sud.hpp"
 #include "io.hpp"
 
-#define TIMEOUT 5
+#define TIMEOUT 30
 
 SudData *readData(SudController *sud, unsigned char mode, unsigned char type) {
     SudData *data;
@@ -33,6 +33,10 @@ SudData *readData(SudController *sud, unsigned char mode, unsigned char type) {
         data = sud->readData();
         gettimeofday(&t1, NULL);
     } while ((t1.tv_sec - t0.tv_sec) < TIMEOUT && (data == NULL || data->mode != mode || data->type != type));
+
+    if (data != NULL && (data->mode != mode || data->type != type)) {
+        data = NULL;
+    }
 
     return data;
 }
