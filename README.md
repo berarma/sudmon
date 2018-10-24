@@ -1,3 +1,5 @@
+**IMPORTANT: As of today the Seneye USB device can't be reliably used without the Seneye software. The device will stop working when out of the water and also after some time has passed without connecting it to the Seneye software. This happens with the Seneye SUDDriver too. I've contacted Seneye and they aren't doing anything to solve it.**
+
 # SUDMON
 
 Command line monitor and library for Seneye USB sensor devices.
